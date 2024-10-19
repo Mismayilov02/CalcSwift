@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_xxl">40sp</dimen>
+    <dimen name="text_xl">32sp</dimen>
+    <dimen name="text_l">28sp</dimen>
+    <dimen name="text_medium">24sp</dimen>
+    <dimen name="text_xsmall">22sp</dimen>
+    <dimen name="text_small">20sp</dimen>
+</resources>

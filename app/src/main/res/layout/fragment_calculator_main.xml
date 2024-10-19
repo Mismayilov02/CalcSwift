@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CalculatorMainFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-18dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_cardview_backround">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn00"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/cardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorButton30">
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnMinus"
+                        style="@style/buttonStyle"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toTopOf="@+id/btnPlus"
+                        app:layout_constraintEnd_toEndOf="@+id/btnMultiply"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/btnMultiply"
+                        app:layout_constraintTop_toBottomOf="@+id/btnMultiply"
+                        app:textField="-"
+                        app:buttonColor="@color/colorText"/>
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnMultiply"
+                        style="@style/buttonStyle"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toTopOf="@+id/btnMinus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/btnDivide"
+                        app:layout_constraintTop_toBottomOf="@+id/btnDivide"
+                        app:textField="×"
+                        app:buttonColor="@color/colorText"/>
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnDivide"
+                        style="@style/buttonStyle"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textField="÷"
+                        app:buttonColor="@color/colorText"/>
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnEqual"
+                        style="@style/buttonStyle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:textField="="
+                        app:buttonColor="@color/colorText"/>
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnPlus"
+                        style="@style/buttonStyle"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toTopOf="@+id/btnEqual"
+                        app:layout_constraintEnd_toEndOf="@+id/btnEqual"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/btnEqual"
+                        app:layout_constraintTop_toBottomOf="@+id/btnMinus"
+                        app:textField="+"
+                        app:buttonColor="@color/colorText"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn3"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn2"
+                app:layout_constraintEnd_toEndOf="@+id/btn6"
+                app:layout_constraintStart_toStartOf="@+id/btn6"
+                app:textField="3"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn2"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn1"
+                app:layout_constraintEnd_toEndOf="@+id/btn5"
+                app:layout_constraintStart_toStartOf="@+id/btn5"
+                app:textField="2"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn1"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toTopOf="@+id/btn4"
+                app:layout_constraintEnd_toEndOf="@+id/btn4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btn4"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:textField="1"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn6"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn5"
+                app:layout_constraintEnd_toEndOf="@+id/btn9"
+                app:layout_constraintStart_toStartOf="@+id/btn9"
+                app:textField="6"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn5"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn4"
+                app:layout_constraintEnd_toEndOf="@+id/btn8"
+                app:layout_constraintStart_toStartOf="@+id/btn8"
+                app:textField="5"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn4"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toTopOf="@+id/btn7"
+                app:layout_constraintEnd_toEndOf="@+id/btn7"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btn7"
+                app:layout_constraintTop_toBottomOf="@+id/btn1"
+                app:textField="4"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn9"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn8"
+                app:layout_constraintEnd_toEndOf="@+id/btn00"
+                app:layout_constraintStart_toStartOf="@+id/btn00"
+                app:textField="9"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn8"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn7"
+                app:layout_constraintEnd_toEndOf="@+id/btn0"
+                app:layout_constraintStart_toStartOf="@+id/btn0"
+                app:textField="8"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn7"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toTopOf="@+id/btnDot"
+                app:layout_constraintEnd_toEndOf="@+id/btnDot"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btnDot"
+                app:layout_constraintTop_toBottomOf="@+id/btn4"
+                app:textField="7"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn00"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btn0"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:textField="00"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btn0"
+                style="@style/buttonStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/btnDot"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:textField="0"
+                app:buttonColor="@color/colorText"/>
+
+            <com.imcalculator.calculator.view.CustomButton
+                android:id="@+id/btnDot"
+                style="@style/buttonStyle"
+                android:layout_marginBottom="40dp"
+                android:paddingTop="15dp"
+                android:textSize="@dimen/text_xxl"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn7"
+                app:textField="·"
+                app:buttonColor="@color/colorText"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn1"
+                app:layout_constraintEnd_toEndOf="@+id/btn3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btn1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorButton30">
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnPercent"
+                        style="@style/buttonStyle"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textField="%"
+                        app:buttonColor="@color/colorText"/>
+
+                    <ImageButton
+                        android:id="@+id/btnDelete"
+                        style="@style/buttonStyle"
+                        android:background="@android:color/transparent"
+                        android:padding="22dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/delete"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnPercent"
+                        app:layout_constraintStart_toEndOf="@+id/btnClear"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/colorText"
+                        app:buttonColor="@color/colorText"/>
+
+                    <com.imcalculator.calculator.view.CustomButton
+                        android:id="@+id/btnClear"
+                        style="@style/buttonStyle"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textField="AC"
+                        app:buttonColor="@color/colorText"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="4dp"
+        android:text="="
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_xxl"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mathRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        app:flow_verticalAlign="bottom"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:stackFromEnd="true"
+        tools:listitem="@layout/calculator_text_recycler_design" />
+
+    <EditText
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="18dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:gravity="center|right"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_xxl"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="110dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        app:cardBackgroundColor="@color/colorTopCard"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moonCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="55dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorTopSelectedCard"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/moon"
+                    app:tint="@color/colorTopButtonSelected" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sunCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="55dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorTopSelectedCard"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sun"
+                    app:tint="@color/colorTopButtonSelected" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageButton
+                android:id="@+id/moonSelectBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="55dp"
+                android:backgroundTint="@android:color/transparent"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/moon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/sunSelectBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorTopButton" />
+
+            <ImageButton
+                android:id="@+id/sunSelectBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="55dp"
+                android:backgroundTint="@android:color/transparent"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sun"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorTopButton" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#F7F7F7</color>
+    <color name="colorText">#373737</color>
+    <color name="colotHintText">#80373737</color>
+    <color name="colorBottomCardGradientStart">#90D9FD</color>
+    <color name="colorBottomCardGradientEnd">#BCD2F1</color>
+    <color name="colorBottomCardGradientCenter">#9ECEF9</color>
+    <color name="colorButton30">#4DFFFFFF</color>
+    <color name="colorButton20">#33FFFFFF</color>
+
+    <color name="colorTopButtonSelected">#373737</color>
+    <color name="colorTopButton">#66373737</color>
+
+    <color name="colorTopCard">#A9DCFD</color>
+    <color name="colorTopSelectedCard">#D8EEFF</color>
+
+</resources>
